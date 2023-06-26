@@ -1,0 +1,163 @@
+{
+	"info": {
+		"_postman_id": "31bd11e4-84e1-4f1f-991f-309b5d50f5f3",
+		"name": "RESTAURANT MANAGEMENT",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "18974135"
+	},
+	"item": [
+		{
+			"name": "RESTAURANT",
+			"item": [
+				{
+					"name": "Register Restaurant",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"restaurant_name\": \"Sample Restaurant\",\r\n    \"address\": \"123 Main Street\",\r\n    \"veg_only\": true,\r\n    \"cost\": 10,\r\n    \"cuisine_types\": [\r\n        \"Italian\",\r\n        \"Indian\"\r\n    ],\r\n    \"isOpen\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://restaurantmanagement-production-b07f.up.railway.app/api/restaurants",
+							"protocol": "https",
+							"host": [
+								"restaurantmanagement-production-b07f",
+								"up",
+								"railway",
+								"app"
+							],
+							"path": [
+								"api",
+								"restaurants"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get all Restaurants",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://restaurantmanagement-production-b07f.up.railway.app/api/restaurants",
+							"protocol": "https",
+							"host": [
+								"restaurantmanagement-production-b07f",
+								"up",
+								"railway",
+								"app"
+							],
+							"path": [
+								"api",
+								"restaurants"
+							],
+							"query": [
+								{
+									"key": "isVeg",
+									"value": "false",
+									"disabled": true
+								},
+								{
+									"key": "cost",
+									"value": "low",
+									"disabled": true
+								},
+								{
+									"key": "cuisines",
+									"value": "Italian",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Single Restaurant",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://restaurantmanagement-production-b07f.up.railway.app/api/restaurants/1",
+							"protocol": "https",
+							"host": [
+								"restaurantmanagement-production-b07f",
+								"up",
+								"railway",
+								"app"
+							],
+							"path": [
+								"api",
+								"restaurants",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Modify Restaurant",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"cost\": 101\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://restaurantmanagement-production-b07f.up.railway.app/api/restaurants/1",
+							"protocol": "https",
+							"host": [
+								"restaurantmanagement-production-b07f",
+								"up",
+								"railway",
+								"app"
+							],
+							"path": [
+								"api",
+								"restaurants",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Remove Restaurant",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://restaurantmanagement-production-b07f.up.railway.app/api/restaurants/1",
+							"protocol": "https",
+							"host": [
+								"restaurantmanagement-production-b07f",
+								"up",
+								"railway",
+								"app"
+							],
+							"path": [
+								"api",
+								"restaurants",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
