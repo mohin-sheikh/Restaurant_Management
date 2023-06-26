@@ -31,6 +31,12 @@ connectDatabase()
   .then(() => {
     logger.info('Database connected.');
 
+    app.get('/', (req: Request, res: Response) => {
+      res.send({
+        message: 'Welcome to Restaurant Management API',
+      });
+    })
+
     // Routes
     app.use('/api', routes);
 
